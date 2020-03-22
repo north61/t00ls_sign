@@ -38,7 +38,7 @@ def get_formhash(session):
     res = session.get(url=url_login, headers=headers)
     formhash_1 = re.findall('value=\"[0-9a-f]{8}\"', res.text)
     formhash = re.findall('[0-9a-f]{8}', formhash_1[0])[0]
-    print(formhash)
+    #print(formhash)
     time.sleep(1)
     return formhash
 def get_current_user(session):
